@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.vieiro</groupId>
+	<artifactId>mvnnbp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+    <name>mvnnbp</name>
+    <description>Use a small subset of NetBeans RCP in plain Swing apps.</description>
+    <url>https://vieiro.net/apuntes/swingnbrcp/</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Set the value below to an appropriate NetBeans Platform version -->
+		<version.netbeans>RELEASE82</version.netbeans>
+		<version.shade-plugin>3.0.0</version.shade-plugin>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>netbeans</id>
+			<name>NetBeans</name>
+			<url>http://bits.netbeans.org/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-netbeans-swing-outline</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-util</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-util-lookup</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-awt</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-dialogs</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-explorer</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-filesystems</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.netbeans.api</groupId>
+			<artifactId>org-openide-nodes</artifactId>
+			<version>${version.netbeans}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>${version.shade-plugin}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<artifactSet>
+								<includes>
+                                    <!-- Some useful NetBeans modules for plain Swing applications -->
+									<include>org.netbeans.api:org-netbeans-swing-outline</include>
+									<include>org.netbeans.api:org-openide-util</include>
+									<include>org.netbeans.api:org-openide-util-lookup</include>
+									<include>org.netbeans.api:org-openide-awt</include>
+									<include>org.netbeans.api:org-openide-dialogs</include>
+									<include>org.netbeans.api:org-openide-explorer</include>
+									<include>org.netbeans.api:org-openide-filesystems</include>
+									<include>org.netbeans.api:org-openide-nodes</include>
+									<include>org.netbeans.api:org-openide-util-ui</include>
+								</includes>
+							</artifactSet>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
