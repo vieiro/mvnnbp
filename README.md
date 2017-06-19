@@ -19,12 +19,11 @@ For the NetBeans license [see this page](https://netbeans.org/about/legal/produc
 4. Use the project in your Swing app:
 
 ```xml
-    <dependency>
-      <groupId>net.vieiro</grpId>
-      <artifactId>mvnnbp</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-```
+		<dependency>
+			<groupId>net.vieiro</groupId>
+			<artifactId>mvnnbp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>```
 
 ## Documentation
 
