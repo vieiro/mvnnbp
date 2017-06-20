@@ -10,7 +10,7 @@ For the NetBeans license [see this page](https://netbeans.org/about/legal/produc
 
 1. Select a NetBeans Platform version
 
-[see this page](http://bits.netbeans.org/nexus/content/groups/netbeans/org/netbeans/api/org-openide-util/) for a list of versions.
+[see this page](http://bits.netbeans.org/nexus/content/groups/netbeans/org/netbeans/api/org-openide-util/ ) for a list of versions.
 
 2. Clone this repository, edit the `pom.xm` file and set the `version.netbeans` property to the desired value.
 
@@ -23,7 +23,8 @@ For the NetBeans license [see this page](https://netbeans.org/about/legal/produc
 			<groupId>net.vieiro</groupId>
 			<artifactId>mvnnbp</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>```
+		</dependency>
+```
 
 ## Documentation
 

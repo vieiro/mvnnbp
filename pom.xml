@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set the value below to an appropriate NetBeans Platform version -->
-		<version.netbeans>RELEASE82</version.netbeans>
+		<version.netbeans>RELEASE80</version.netbeans>
 		<version.shade-plugin>3.0.0</version.shade-plugin>
 	</properties>
 
